@@ -13,15 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hillert;
+package com.hillert.controller;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@SpringBootApplication
-public class JspDemoApplication {
+@Controller
+public class HelloWorldController {
 
-	public static void main(String[] args) {
-		SpringApplication.run(JspDemoApplication.class, args);
+	@RequestMapping("/")
+	public String helloWorld(Model model) {
+		model.addAttribute("russian", "Добрый день");
+		return "hello-world";
 	}
+
 }
