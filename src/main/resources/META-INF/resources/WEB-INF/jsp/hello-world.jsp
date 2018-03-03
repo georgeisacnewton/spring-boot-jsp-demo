@@ -13,6 +13,6 @@ response.setHeader("Expires","0");
 <c:set var="ctx" value="${pageContext['request'].contextPath}"/>
 <html>
 	<body>
-		<h1>Hello World - ${russian}</h1>
+		<h1>Welcome to PWC</h1>
 	</body>
 </html>
